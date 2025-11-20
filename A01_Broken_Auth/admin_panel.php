@@ -8,7 +8,8 @@ if (!isset($_SESSION['user_id'])) {
     die('Devi fare il login');
 }
 
-if($_SESSION['role'] !== 'admin'){
+
+if (isset($_SESSION['role']) && $_SESSION['role'] != 'admin') {
     die('Tu non puoi passare!');
 }
 
